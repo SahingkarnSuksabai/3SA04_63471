@@ -1,19 +1,22 @@
 import React, { useState } from "react";
-import { Text, ImageBackground, StyleSheet } from "react-native"
-import Forecast from "./Forecast"
+import { ImageBackground, Text, StyleSheet } from 'react-native';
+import { View } from "react-native";
+import Forecast from "./Forecast";
+import Constants from 'expo-constants';
 
 export default function Weather(props){
     const [ForecastInfo, setForecastInfo] = useState({
-        main: '-',
-        description: '-',
+        main: '',
+        description: '',
         temp: 0
     })
 
     return (
         <ImageBackground source={require('../bg.jpg')} style={style.backdrop}>
-            <Text>Zip Code</Text>
-            <Text>{props.zipCode}</Text>
-            <Forecast {...ForecastInfo}/>
+            <View style={style.highlight}>
+                <Text style={style.titleText}>Zip code is {props.zipCode}.</Text>
+                <Forecast {...ForecastInfo}/>
+            </View>
         </ImageBackground>
         
     );
@@ -25,4 +28,18 @@ const style = StyleSheet.create({
         width: '100%',
         height: '100%'
     },
-});
+    highlight: {
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        width:"100%", 
+        height:"45%", 
+        paddingTop: Constants.statusBarHeight, 
+        alignItems: 'center'
+    },
+
+    titleText: {
+        fontSize: 32,
+        fontWeight: "bold",
+        color: 'white',
+        textAlign: 'center'
+    }
+})
