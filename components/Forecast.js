@@ -8,6 +8,8 @@ export default function Forecast(props){
             <Text style={style.normalText}>{props.main}</Text>
             <Text style={style.normalText}>description</Text>
             <Text style={style.normalText}>{props.description}</Text>
+            <Text style={style.titleText}>{props.main}</Text>
+            <Text style={style.titleText}>!-----------------------------------!</Text>
             <View style= {{
                 flexDirection: "row",
                 justifyContent: 'center',
@@ -38,6 +40,15 @@ const style = StyleSheet.create(
             textAlign: 'center',
             lineHeight: 60
 
-        }
+        
+
+
+        },
+        titleText: {
+            textAlign: 'center',
+            fontSize: 50,
+            fontWeight: "bold",
+            color: 'white',
     }
+}
 ) 
