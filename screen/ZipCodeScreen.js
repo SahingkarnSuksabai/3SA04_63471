@@ -13,7 +13,18 @@ const availableZipItems = [
     { place: 'Samutprakan', code: '10540' },
     { place: 'Chaingmai', code: '50220' },
     { place: 'Khonkaen', code: '40150' },
-    { place: 'Rayong', code: '21000' },
+    { place: 'Ranong', code: '85000' },
+    { place: 'Yala', code: '95000' },
+    { place: 'Pattani', code: '94230' },
+    { place: 'Naratiwat', code: '96000' },
+    { place: 'Loey', code: '42000' },
+    { place: 'Sukothai', code: '64000' },
+    { place: 'Saraburi', code: '18000' },
+    { place: 'Roi Et', code: '45000' },
+    { place: 'Surin', code: '32000' },
+    { place: 'Satun', code: '91000' },
+    { place: 'Kabi', code: '81000' },
+    { place: 'Chumphon', code: '86000' },
    ]
 
 const ZipItem = ({place, code, navigation}) => (
